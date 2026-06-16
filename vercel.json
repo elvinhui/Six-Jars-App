@@ -1,0 +1,10 @@
+{
+  "builds": [],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://six-jars-app.streamlit.app/",
+      "permanent": false
+    }
+  ]
+}
