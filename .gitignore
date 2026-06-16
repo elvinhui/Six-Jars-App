@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.env
+
+# Streamlit secrets (Do not commit passwords!)
+.streamlit/secrets.toml
+
+# Generated reports
+*.pdf
