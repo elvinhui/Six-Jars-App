@@ -1,0 +1,3 @@
+# Ignore everything so Vercel doesn't try to build the Streamlit Python app
+*
+!vercel.json
