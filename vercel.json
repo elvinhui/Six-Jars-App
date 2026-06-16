@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://<YOUR-STREAMLIT-APP-URL>.streamlit.app/",
+      "permanent": false
+    }
+  ]
+}
