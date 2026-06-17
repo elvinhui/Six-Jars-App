@@ -6,6 +6,22 @@ import math
 
 st.set_page_config(page_title="Six Jars FIRE", page_icon="🍯", layout="centered")
 
+hide_st_style = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden !important;}
+header {visibility: hidden !important;}
+[data-testid="stAppDeployButton"] {display: none !important;}
+[data-testid="stToolbar"] {display: none !important;}
+.viewerBadge_container {display: none !important;}
+[data-testid="stBottom"] {display: none !important;}
+a[href="https://streamlit.io/cloud"] {display: none !important;}
+/* hide fullscreen button */
+button[title="View fullscreen"] {display: none !important;}
+</style>
+"""
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 def check_password():
     def password_entered():
         if st.session_state["password"] == st.secrets.get("APP_PASSWORD", "fire"):
