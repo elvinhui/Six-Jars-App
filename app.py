@@ -44,7 +44,7 @@ if not check_password():
     st.stop()
 
 # --- Language Selection ---
-lang = st.radio("Language / 语言", ["中文", "English"], horizontal=True)
+lang = st.radio("Language / 语言", ["English", "中文"], horizontal=True)
 
 # --- Translations Dictionary ---
 t = {
