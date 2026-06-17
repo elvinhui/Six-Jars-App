@@ -245,3 +245,6 @@ if st.button(t["gen_btn"]):
                 file_name="Six_Jars_Report.pdf",
                 mime="application/pdf"
             )
+
+st.markdown("<div style='height: 60px;'></div>", unsafe_allow_html=True)
+
