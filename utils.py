@@ -1,7 +1,9 @@
 import yfinance as yf
 from fpdf import FPDF
 import math
+import streamlit as st
 
+@st.cache_data(ttl=3600)
 def fetch_ticker_data(ticker_symbol):
     try:
         ticker = yf.Ticker(ticker_symbol)
@@ -28,6 +30,7 @@ def fetch_ticker_data(ticker_symbol):
     except Exception as e:
         return None, None, f"Invalid ticker '{ticker_symbol}'."
 
+@st.cache_data(ttl=3600)
 def get_exchange_rate(from_curr, to_curr):
     if from_curr == to_curr:
         return 1.0

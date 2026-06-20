@@ -1,3 +1,4 @@
+# pyrefly: ignore [missing-import]
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -40,8 +41,8 @@ def check_password():
     else:
         return True
 
-if not check_password():
-    st.stop()
+# if not check_password():
+#     st.stop()
 
 # --- Language Selection ---
 lang = st.radio("Language / 语言", ["English", "中文"], horizontal=True)
