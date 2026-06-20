@@ -2,7 +2,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from utils import fetch_ticker_data, get_exchange_rate, generate_pdf_report
+from app_utils import fetch_ticker_data, get_exchange_rate, generate_pdf_report
 import math
 
 st.set_page_config(page_title="Six Jars FIRE", page_icon="🍯", layout="centered")
@@ -147,7 +147,7 @@ labels = [j["name"] for j in jars_data]
 values = [j["amount"] for j in jars_data]
 
 fig = px.pie(names=labels, values=values, hole=0.4, title=t["pie_title"])
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width='stretch')
 
 cols = st.columns(3)
 for i, jar in enumerate(jars_data):
